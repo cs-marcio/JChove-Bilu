@@ -1,0 +1,98 @@
+[{
+		"name" : "Cantareira",
+		"data" : [{
+				"key" : "volume armazenado",
+				"value" : "Índice 1: 18,8 %Índice 2: 14,6 %Índice 3: -10,4 %"
+			}, {
+				"key" : "pluviometria do dia",
+				"value" : "0,0 mm"
+			}, {
+				"key" : "pluviometria acumulada no mês",
+				"value" : "43,5 mm"
+			}, {
+				"key" : "média histórica do mês",
+				"value" : "50,0 mm"
+			}
+		]
+	}, {
+		"name" : "Alto Tietê",
+		"data" : [{
+				"key" : "volume armazenado",
+				"value" : "18,5 %"
+			}, {
+				"key" : "pluviometria do dia",
+				"value" : "0,2 mm"
+			}, {
+				"key" : "pluviometria acumulada no mês",
+				"value" : "57,2 mm"
+			}, {
+				"key" : "média histórica do mês",
+				"value" : "49,2 mm"
+			}
+		]
+	}, {
+		"name" : "Guarapiranga",
+		"data" : [{
+				"key" : "volume armazenado",
+				"value" : "77,0 %"
+			}, {
+				"key" : "pluviometria do dia",
+				"value" : "0,2 mm"
+			}, {
+				"key" : "pluviometria acumulada no mês",
+				"value" : "88,4 mm"
+			}, {
+				"key" : "média histórica do mês",
+				"value" : "42,1 mm"
+			}
+		]
+	}, {
+		"name" : "Alto Cotia",
+		"data" : [{
+				"key" : "volume armazenado",
+				"value" : "62,5 %"
+			}, {
+				"key" : "pluviometria do dia",
+				"value" : "0,2 mm"
+			}, {
+				"key" : "pluviometria acumulada no mês",
+				"value" : "75,6 mm"
+			}, {
+				"key" : "média histórica do mês",
+				"value" : "53,4 mm"
+			}
+		]
+	}, {
+		"name" : "Rio Grande",
+		"data" : [{
+				"key" : "volume armazenado",
+				"value" : "90,1 %"
+			}, {
+				"key" : "pluviometria do dia",
+				"value" : "0,2 mm"
+			}, {
+				"key" : "pluviometria acumulada no mês",
+				"value" : "68,0 mm"
+			}, {
+				"key" : "média histórica do mês",
+				"value" : "56,5 mm"
+			}
+		]
+	}, {
+		"name" : "Rio Claro",
+		"data" : [{
+				"key" : "volume armazenado",
+				"value" : "72,3 %"
+			}, {
+				"key" : "pluviometria do dia",
+				"value" : "0,2 mm"
+			}, {
+				"key" : "pluviometria acumulada no mês",
+				"value" : "90,4 mm"
+			}, {
+				"key" : "média histórica do mês",
+				"value" : "94,5 mm"
+			}
+		]
+	}
+]
