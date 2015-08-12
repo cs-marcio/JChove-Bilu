@@ -1,4 +1,3 @@
-<%@page import="br.com.chovebilu.reservatorio.StatusReservatorio"%>
 <%@page import="br.com.chovebilu.scanner.TrackerSabesp"%>
 <%@page import="br.com.chovebilu.reservatorio.Reservatorio"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
