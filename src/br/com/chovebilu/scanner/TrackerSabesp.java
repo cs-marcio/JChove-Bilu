@@ -16,7 +16,7 @@ public class TrackerSabesp {
 	ArrayList<Reservatorio> reservatorios = new ArrayList<>();
 
 	private static UrlSabesp url = new UrlSabesp(
-			"https://sabesp-api.herokuapp.com");
+			"https://sabesp-api.herokuapp.com/2015-08-10");
 
 	public TrackerSabesp() {
 		JSONArray arraySabesp;
@@ -43,8 +43,12 @@ public class TrackerSabesp {
 							.toString());
 
 					if (dados.get("key").toString().equals("volume armazenado")) {
-						r.setVol_armazenado(onlyNumbersAndDot(dados
-								.get("value").toString()));
+						if (dados.get("value").toString().contains("n")) {
+							r.setVol_armazenado(getVolumeArmazenado(dados.get("value").toString()));							
+						} else {
+							r.setVol_armazenado(onlyNumbersAndDot(dados.get("value").toString()));
+						}
+						
 					} else if (dados.get("key").toString()
 							.equals("pluviometria do dia")) {
 						r.setPlu_dia(onlyNumbersAndDot(dados.get("value")
@@ -96,5 +100,20 @@ public class TrackerSabesp {
 		} else {
 			return "";
 		}
+	}
+	
+	public String getVolumeArmazenado(String volArmaz){
+		String indice1, indice2, indice3;
+		Double indice;
+		
+		indice1 = volArmaz.substring(volArmaz.indexOf("1:") + 3, volArmaz.indexOf("1:") + 8);
+		indice2 = volArmaz.substring(volArmaz.indexOf("2:") + 3, volArmaz.indexOf("2:") + 8);
+		indice3 = volArmaz.substring(volArmaz.indexOf("3:") + 3, volArmaz.indexOf("3:") + 8);
+		
+		indice = (Double.parseDouble(indice1.replace(",", ".")))
+					+(Double.parseDouble(indice2.replace(",", ".")))
+					+(Double.parseDouble(indice3.replace(",", ".")));
+		
+		return indice.toString();
 	}
 }
