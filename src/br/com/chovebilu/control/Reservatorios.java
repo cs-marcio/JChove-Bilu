@@ -1,8 +1,13 @@
-package br.com.chovebilu.scanner;
+package br.com.chovebilu.control;
 
-import java.nio.charset.Charset;
+/**
+ * @author cs-marcio
+ * 
+ * O contrutor da classe cria um ArrayList com todos os reservatórios obtidos do arquivo arraySabesp
+ * 
+ * */
+
 import java.util.ArrayList;
-import java.util.List;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -10,15 +15,15 @@ import org.json.simple.JSONValue;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import br.com.chovebilu.reservatorio.Reservatorio;
+import br.com.chovebilu.model.Reservatorio;
 
-public class TrackerSabesp {
+public class Reservatorios {
+	
 	ArrayList<Reservatorio> reservatorios = new ArrayList<>();
 
-	private static UrlSabesp url = new UrlSabesp(
-			"https://sabesp-api.herokuapp.com/2015-08-10");
+	private JSONSabesp url = new JSONSabesp();
 
-	public TrackerSabesp() {
+	public Reservatorios() {
 		JSONArray arraySabesp;
 		JSONParser parser = new JSONParser();
 

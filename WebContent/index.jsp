@@ -3,7 +3,7 @@
 
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<jsp:useBean id="lista" class="br.com.chovebilu.scanner.TrackerSabesp" />
+<jsp:useBean id="lista" class="br.com.chovebilu.control.Reservatorios" />
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,12 +25,11 @@
 	</header>
 	<section class="sec sec2">
 		<img src="img/reservatorio.png"
-			style="text-align: center; height: 50vh" id="img">
+			style="text-align: center;" id="img">
 		<form style="text-align: center;" id="target" action="main.jsp" method="post" accept-charset="UTF-8">
 			<select class="form-control" name="reservatorio">
 				<c:forEach var="list" items="${lista.getReservatorios()}">
-					<option value="${list.getName()}">Reservatório:
-						${list.getName()}</option>
+					<option value="${list.getName()}">${list.getName()}</option>
 				</c:forEach>
 			</select>
 			<p>

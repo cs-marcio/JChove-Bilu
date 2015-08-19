@@ -26,31 +26,33 @@ header {
 
 .sec {
 	position: relative;
-	align-items: center;
 }
 
 .sec2 {
+	text-align: center;
 	background: #DFDAA9;
-	font-size: 40pt;
+	font-size: 4em;
 }
 
 .sec1, .sec3 {
+	text-align: center;
 	background: #4F5ACC;
 	padding-top: 30vh;
 }
 
 .sec3 p {
-	font-size: 40pt;
+	font-size: 4em;
 }
 
 .sec1 p {
-	font-size: 70pt;
+	font-size: 5em;
 	font: #FFF !important;
 }
 
 section {
 	min-height: 100vh;
 	margin: auto 0;
+	
 }
 
 .div2 {
@@ -58,13 +60,14 @@ section {
 }
 
 #target {
-	margin: 0 5em;
+	margin: 0 20vw;
 }
 
 #img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	height: 50vh;
 }
 
 .description, p.description {

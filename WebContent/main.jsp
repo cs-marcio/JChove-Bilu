@@ -1,12 +1,9 @@
-<%@page import="br.com.chovebilu.scanner.TrackerSabesp"%>
-<%@page import="br.com.chovebilu.reservatorio.Reservatorio"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<jsp:useBean id="r"
-	class="br.com.chovebilu.reservatorio.ReservatorioMain" />
+<jsp:useBean id="r" class="br.com.chovebilu.control.ReservatorioMain" />
 
 <%
 	request.setCharacterEncoding("UTF-8");
@@ -31,7 +28,6 @@
 		<img src="img/avatar_bilus-08.png">
 	</header>
 	<section class="sec sec1">
-		<center>
 			<c:choose>
 				<c:when test="${r.getReservatorio().getPlu_dia().equals('0.0')}">
 					<img src="img/tempo-01.png">
@@ -42,22 +38,17 @@
 					<p>Tá Chovendo</p>
 				</c:otherwise>
 			</c:choose>
-		</center>
 	</section>
 	<section class="sec2">
-		<center>
 			<img src="${r.getImgNivelReservatorio() }">
 			<p>Nivel do reservatório</p>
 			<p class="description">${r.getNivelReservatorio()}</p>
-		</center>
 	</section>
 
 	<section class="sec3">
-		<center>
 			<img src="${r.getImgNivelChuva() }">
 			<p>Nivel de Chuva</p>
 			<p class="description">${r.getNivelChuva() * 10}%</p>
-		</center>
 	</section>
 
 	<footer id="MyFooter" style="height: auto;">

@@ -1,14 +1,14 @@
-package br.com.chovebilu.test;
+package br.com.chovebilu.testeMain;
 
 import java.util.ArrayList;
 
-import br.com.chovebilu.reservatorio.Reservatorio;
-import br.com.chovebilu.scanner.TrackerSabesp;
+import br.com.chovebilu.control.Reservatorios;
+import br.com.chovebilu.model.Reservatorio;
 
 public class Test_main {
 
 	public static void main(String[] args) {		
-		TrackerSabesp sabesp = new TrackerSabesp();
+		Reservatorios sabesp = new Reservatorios();
 		
 		ArrayList<Reservatorio> reservatorios = sabesp.getReservatorios();
 		

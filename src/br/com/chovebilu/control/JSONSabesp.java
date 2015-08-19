@@ -1,17 +1,28 @@
-package br.com.chovebilu.scanner;
+package br.com.chovebilu.control;
+
+/**
+ * @author cs-marcio
+ * 
+ * Realiza as operações necessárias com o objeto Reservatorio
+ * 
+ * */
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-public class UrlSabesp {
+public class JSONSabesp {
+	private String urlJSON;
 	private StringBuffer buffer = null;
 
-	UrlSabesp(String urlString){
+	JSONSabesp(){
+		getUrlJSON();
 		BufferedReader reader = null;
 		try {
-			URL url = new URL(urlString);
+			URL url = new URL(urlJSON);
 			reader = new BufferedReader(new InputStreamReader(url.openStream()));
 			buffer = new StringBuffer();
 			int read;
@@ -34,5 +45,10 @@ public class UrlSabesp {
 
 	public String getBuffer() {
 		return buffer.toString();
+	}
+	
+	public void getUrlJSON(){
+		String dateNow = new SimpleDateFormat("yyyy-MM-dd").format(new Date());		
+		urlJSON = "https://sabesp-api.herokuapp.com/"+dateNow;
 	}
 }
